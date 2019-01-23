@@ -115,9 +115,7 @@ function prependTitle(components, localizationService) {
     return components;
   }
 
-  const title = localizationService
-      .getLocalizedString(
-          LocalizedStringId.AMP_STORY_BOOKEND_MORE_TO_READ_LABEL);
+  const title = 'Contact';
   components.unshift({'type': 'heading', 'text': title});
   return components;
 }

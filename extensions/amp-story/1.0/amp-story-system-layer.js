@@ -72,6 +72,43 @@ const SIDEBAR_CLASS = 'i-amphtml-story-sidebar-control';
 
 /** @private @const {number} */
 const HIDE_AUDIO_MESSAGE_TIMEOUT_MS = 1500;
+// 
+// // HOMEPAGE
+// /** @private @const {!./simple-template.ElementDef} */
+// const TEMPLATE = {
+//   tag: 'aside',
+//   attrs: dict(
+//       {'class': 'i-amphtml-story-system-layer i-amphtml-story-system-reset'}),
+//   children: [
+//     {
+//       tag: 'div',
+//       attrs: dict({'class': 'i-amphtml-story-system-layer-buttons'}),
+//       children: [
+//         {
+//           tag: 'div',
+//           attrs: dict({
+//             'role': 'button',
+//             'class': INFO_CLASS + ' i-amphtml-story-button',
+//           }),
+//         },
+//         {
+//           tag: 'div',
+//           attrs: dict({
+//             'role': 'button',
+//             'class': SHARE_CLASS + ' i-amphtml-story-button',
+//           }),
+//         },
+//         {
+//           tag: 'div',
+//           attrs: dict({
+//             'role': 'button',
+//             'class': SIDEBAR_CLASS + ' i-amphtml-story-button',
+//           }),
+//         },
+//       ],
+//     },
+//   ],
+// };
 
 /** @private @const {!./simple-template.ElementDef} */
 const TEMPLATE = {
@@ -83,13 +120,6 @@ const TEMPLATE = {
       tag: 'div',
       attrs: dict({'class': 'i-amphtml-story-system-layer-buttons'}),
       children: [
-        {
-          tag: 'div',
-          attrs: dict({
-            'role': 'button',
-            'class': INFO_CLASS + ' i-amphtml-story-button',
-          }),
-        },
         {
           tag: 'div',
           attrs: dict({
@@ -143,6 +173,13 @@ const TEMPLATE = {
               }),
             },
           ],
+        },
+        {
+          tag: 'div',
+          attrs: dict({
+            'role': 'button',
+            'class': INFO_CLASS + ' i-amphtml-story-button',
+          }),
         },
         {
           tag: 'div',

@@ -26,6 +26,10 @@ export const StateChangeType = {
   BOOKEND_ENTER: 1,
   BOOKEND_EXIT: 2,
   END: 3,
+  SHARE_OPEN: 4,
+  SHARE_CLOSE: 5,
+  ACCOUNT_OPEN: 6,
+  ACCOUNT_CLOSE: 7,
 };
 
 
@@ -69,6 +73,24 @@ export class NavigationState {
 
       if (!isActive) {
         this.fire_(StateChangeType.BOOKEND_EXIT);
+      }
+    });
+    this.storeService_.subscribe(StateProperty.SHARE_MENU_STATE, isActive => {
+      if (isActive) {
+        this.fire_(StateChangeType.SHARE_OPEN);
+      }
+
+      if (!isActive) {
+        this.fire_(StateChangeType.SHARE_CLOSE);
+      }
+    });
+    this.storeService_.subscribe(StateProperty.INFO_DIALOG_STATE, isActive => {
+      if (isActive) {
+        this.fire_(StateChangeType.ACCOUNT_OPEN);
+      }
+
+      if (!isActive) {
+        this.fire_(StateChangeType.ACCOUNT_CLOSE);
       }
     });
   }

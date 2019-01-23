@@ -78,6 +78,7 @@ html.i-amphtml-story-standalone body {
 amp-story p,
 amp-story h4 {
   font-size: 1rem;
+  margin: 0;
 }
 
 amp-story h1 {
@@ -90,10 +91,17 @@ amp-story h2 {
 
 amp-story h3 {
   font-size: 1.17rem;
+  margin-bottom: auto;
 }
 
 amp-story h5 {
   font-size: 0.83rem;
+  margin: 0;
+  color:darkgray;
+}
+
+a {
+  color:inherit;
 }
 
 amp-story h6 {
@@ -177,7 +185,9 @@ amp-story-page[active] {
 }
 
 amp-story amp-sidebar[side][open] {
-  background-color: #ffffff !important;
+  background-color: #000 !important;
+  color: black !important;
+  padding: 20px !important;
   max-width: 280px !important;
   min-width: 280px !important;
   width: 280px !important;
@@ -186,6 +196,7 @@ amp-story amp-sidebar[side][open] {
 
 [desktop] amp-sidebar[side][open]{
   max-width: 320px !important;
+  padding: 20px !important;
 }
 
 .i-amphtml-story-fallback amp-story-page {
@@ -283,14 +294,24 @@ amp-story amp-video::after {
 /** Call to action layer, positioned at the bottom 20% of the screen. */
 amp-story-cta-layer {
   display: block !important;
-  position: absolute !important;
-  top: 80% !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
   z-index: 3 !important;
+  position: absolute!important;
+  top: unset!important;
+  bottom: 1rem!important;
+  left: 8px!important;
+  right: 8px!important;
+  height: 8.5rem!important;
+  padding: 0px 16px 0px 16px;
+  border-radius: 8px 8px 8px 8px!important;
+  background-color: white !important;
+  color: black !important;
+  margin-top: auto;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
+
 
 /** Grid level */
 amp-story-grid-layer {

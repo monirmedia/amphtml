@@ -99,14 +99,7 @@ const NOBUILD_HELP_TASKS = new Set(['test', 'visual-diff']);
  * @private @const {!Array<string>}
  */
 const MINIMAL_EXTENSION_SET = [
-  'amp-ad',
-  'amp-ad-network-adsense-impl',
-  'amp-analytics',
-  'amp-audio',
-  'amp-image-lightbox',
-  'amp-lightbox',
-  'amp-sidebar',
-  'amp-video',
+  'amp-story',
 ];
 
 

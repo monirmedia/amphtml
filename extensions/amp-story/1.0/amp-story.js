@@ -179,7 +179,7 @@ const OPACITY_MASK_CLASS_NAME = 'i-amphtml-story-opacity-mask';
 
 /** @const {!Object<string, number>} */
 const MAX_MEDIA_ELEMENT_COUNTS = {
-  [MediaType.AUDIO]: 4,
+  [MediaType.AUDIO]: 15,
   [MediaType.VIDEO]: 8,
 };
 
@@ -198,7 +198,7 @@ const HIDE_ON_BOOKEND_SELECTOR =
  * The default dark gray for chrome supported theme color.
  * @const {string}
  */
-const DEFAULT_THEME_COLOR = '#202125';
+const DEFAULT_THEME_COLOR = '#000000';
 
 /**
  * @implements {./media-pool.MediaPoolRoot}
@@ -769,7 +769,6 @@ export class AmpStory extends AMP.BaseElement {
     const storyLayoutPromise = this.initializePages_()
         .then(() => {
           this.buildSystemLayer_();
-
           this.handleConsentExtension_();
           this.initializeStoryAccess_();
 
@@ -800,8 +799,7 @@ export class AmpStory extends AMP.BaseElement {
             this.shareMenu_.build();
           }
 
-          const infoDialog = Services.viewerForDoc(this.element).isEmbedded() ?
-            new InfoDialog(this.win, this.element) : null;
+          const infoDialog =     new InfoDialog(this.win, this.element);
           if (infoDialog) {
             infoDialog.build();
           }

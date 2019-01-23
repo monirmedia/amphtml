@@ -26,6 +26,10 @@ const Events = {
   BOOKEND_EXIT: 'story-bookend-exit',
   STORY_MUTED: 'story-audio-muted',
   STORY_UNMUTED: 'story-audio-unmuted',
+  SHARE_MENU_OPEN: 'share-menu-open',
+  SHARE_MENU_CLOSE: 'share-menu-close',
+  ACCOUNT_OPEN: 'story-account-open',
+  ACCOUNT_CLOSE: 'story-account-close',
 };
 
 
@@ -58,6 +62,18 @@ export class AmpStoryAnalytics {
         break;
       case StateChangeType.BOOKEND_EXIT:
         this.triggerEvent_(Events.BOOKEND_EXIT);
+        break;
+      case StateChangeType.SHARE_OPEN:
+        this.triggerEvent_(Events.SHARE_MENU_OPEN);
+        break;
+      case StateChangeType.SHARE_CLOSE:
+        this.triggerEvent_(Events.SHARE_MENU_CLOSE);
+        break;
+      case StateChangeType.ACCOUNT_OPEN:
+        this.triggerEvent_(Events.ACCOUNT_OPEN);
+        break;
+      case StateChangeType.ACCOUNT_CLOSE:
+        this.triggerEvent_(Events.ACCOUNT_CLOSE);
         break;
     }
   }

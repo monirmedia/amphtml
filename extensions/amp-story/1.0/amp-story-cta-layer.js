@@ -64,8 +64,6 @@ export class AmpStoryCtaLayer extends AmpStoryBaseLayer {
   setOrOverwriteAttributes_() {
     const ctaLinks = this.element.querySelectorAll('a');
     for (let i = 0; i < ctaLinks.length; i++) {
-      addAttributesToElement(ctaLinks[i], dict({'target': '_blank'}));
-
       if (!ctaLinks[i].getAttribute('role')) {
         addAttributesToElement(ctaLinks[i], dict({'role': 'link'}));
       }

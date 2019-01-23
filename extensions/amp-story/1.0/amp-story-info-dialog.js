@@ -94,10 +94,46 @@ export class InfoDialog {
         <div class="i-amphtml-story-info-dialog i-amphtml-story-system-reset">
           <div class="i-amphtml-story-info-dialog-container">
             <h1 class="i-amphtml-story-info-heading"></h1>
-            <a class="i-amphtml-story-info-link"></a>
-            <a class="i-amphtml-story-info-moreinfo"></a>
+            <h5 class="i-amphtml-story-info-link">A
+            <a href="https://www.ampproject.org/docs/reference/components/amp-access#amp-reader-id"
+            style="color: inherit;" data-vars-anchor-type="reader-id" role="link" target="_blank">Reader ID</a>.. that's how I know you. Choose a handle 😉</h5>
+            <div style="text-align: center;">
+            <a href="https://monirhq.typeform.com/to/LHo13Q" role="link" target="_blank" data-vars-anchor-type="account-faq" style="
+                color: #000!important;
+                text-transform: uppercase!important;
+                font-size: 13px!important;
+                font-weight: 400!important;
+                line-height: 70px!important;
+                padding: 10px 24px!important;
+                text-overflow: ellipsis!important;
+                margin: 25px;
+                white-space: nowrap!important;
+                text-decoration: none;
+                border-radius: 100px!important;
+                overflow: hidden!important;
+                cursor: pointer!important;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, .6);"
+                >FAQ</a>
+            <a href="https://monir.media/signup/" role="link" target="_blank" data-vars-anchor-type="account-signup" <h4="" style="
+                color: #000!important;
+                text-transform: uppercase!important;
+                font-size: 13px!important;
+                font-weight: 700!important;
+                line-height: 70px!important;
+                padding: 10px 24px!important;
+                text-overflow: ellipsis!important;
+                margin: 25px;
+                white-space: nowrap!important;
+                text-decoration: none;
+                border-radius: 100px!important;
+                overflow: hidden!important;
+                cursor: pointer!important;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+            ">Sign Up</a></div>
           </div>
         </div>`;
+
+
 
     createShadowRootWithStyle(root, this.element_, CSS);
     this.initializeListeners_();
@@ -115,9 +151,9 @@ export class InfoDialog {
     return Promise.all([
       appendPromise,
       this.setHeading_(),
-      this.setPageLink_(pageUrl),
-      this.requestMoreInfoLink_()
-          .then(moreInfoUrl => this.setMoreInfoLinkUrl_(moreInfoUrl)),
+      //this.setPageLink_(pageUrl),
+      //this.requestMoreInfoLink_()
+      //    .then(moreInfoUrl => this.setMoreInfoLinkUrl_(moreInfoUrl)),
     ]);
   }
 
@@ -196,8 +232,7 @@ export class InfoDialog {
    * Sets the heading on the dialog.
    */
   setHeading_() {
-    const label = this.localizationService_.getLocalizedString(
-        LocalizedStringId.AMP_STORY_DOMAIN_DIALOG_HEADING_LABEL);
+    const label = "Mmh 💯 Stories are personalized.";
     const headingEl = dev().assertElement(
         this.element_.querySelector('.i-amphtml-story-info-heading'));
 
