@@ -64,12 +64,15 @@ export class ArticleComponent {
   build(articleJson, element) {
     const url = articleJson['url'];
     const domainName = getSourceOriginForElement(element, url);
-
+    title = articleJson['title'];
+    if (url.startsWith('https://monir.media/')) {
+      title = "Mmh 💯 "+ title;
+    }
     const article = {
       url,
       domainName,
       type: articleJson['type'],
-      title: articleJson['title'],
+      title: title,
     };
 
     if (articleJson['image']) {

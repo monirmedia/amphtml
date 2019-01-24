@@ -72,44 +72,8 @@ const SIDEBAR_CLASS = 'i-amphtml-story-sidebar-control';
 
 /** @private @const {number} */
 const HIDE_AUDIO_MESSAGE_TIMEOUT_MS = 1500;
-// 
-// // HOMEPAGE
-// /** @private @const {!./simple-template.ElementDef} */
-// const TEMPLATE = {
-//   tag: 'aside',
-//   attrs: dict(
-//       {'class': 'i-amphtml-story-system-layer i-amphtml-story-system-reset'}),
-//   children: [
-//     {
-//       tag: 'div',
-//       attrs: dict({'class': 'i-amphtml-story-system-layer-buttons'}),
-//       children: [
-//         {
-//           tag: 'div',
-//           attrs: dict({
-//             'role': 'button',
-//             'class': INFO_CLASS + ' i-amphtml-story-button',
-//           }),
-//         },
-//         {
-//           tag: 'div',
-//           attrs: dict({
-//             'role': 'button',
-//             'class': SHARE_CLASS + ' i-amphtml-story-button',
-//           }),
-//         },
-//         {
-//           tag: 'div',
-//           attrs: dict({
-//             'role': 'button',
-//             'class': SIDEBAR_CLASS + ' i-amphtml-story-button',
-//           }),
-//         },
-//       ],
-//     },
-//   ],
-// };
-
+//
+// HOMEPAGE
 /** @private @const {!./simple-template.ElementDef} */
 const TEMPLATE = {
   tag: 'aside',
@@ -120,60 +84,6 @@ const TEMPLATE = {
       tag: 'div',
       attrs: dict({'class': 'i-amphtml-story-system-layer-buttons'}),
       children: [
-        {
-          tag: 'div',
-          attrs: dict({
-            'class': 'i-amphtml-story-sound-display',
-          }),
-          children: [
-            {
-              tag: 'div',
-              attrs: dict({
-                'class': 'i-amphtml-message-container',
-              }),
-              children: [
-                {
-                  tag: 'div',
-                  attrs: dict({
-                    'class': 'i-amphtml-story-mute-text' ,
-                  }),
-                  localizedStringId:
-                        LocalizedStringId.AMP_STORY_AUDIO_MUTE_BUTTON_TEXT,
-                },
-                {
-                  tag: 'div',
-                  attrs: dict({
-                    'class': 'i-amphtml-story-unmute-sound-text',
-                  }),
-                  localizedStringId:
-                        LocalizedStringId.AMP_STORY_AUDIO_UNMUTE_SOUND_TEXT,
-                },
-                {
-                  tag: 'div',
-                  attrs: dict({
-                    'class': 'i-amphtml-story-unmute-no-sound-text' ,
-                  }),
-                  localizedStringId:
-                        LocalizedStringId.AMP_STORY_AUDIO_UNMUTE_NO_SOUND_TEXT,
-                },
-              ],
-            },
-            {
-              tag: 'div',
-              attrs: dict({
-                'role': 'button',
-                'class': UNMUTE_CLASS + ' i-amphtml-story-button',
-              }),
-            },
-            {
-              tag: 'div',
-              attrs: dict({
-                'role': 'button',
-                'class': MUTE_CLASS + ' i-amphtml-story-button',
-              }),
-            },
-          ],
-        },
         {
           tag: 'div',
           attrs: dict({
@@ -199,6 +109,96 @@ const TEMPLATE = {
     },
   ],
 };
+//
+// /** @private @const {!./simple-template.ElementDef} */
+// const TEMPLATE = {
+//   tag: 'aside',
+//   attrs: dict(
+//       {'class': 'i-amphtml-story-system-layer i-amphtml-story-system-reset'}),
+//   children: [
+//     {
+//       tag: 'div',
+//       attrs: dict({'class': 'i-amphtml-story-system-layer-buttons'}),
+//       children: [
+//         {
+//           tag: 'div',
+//           attrs: dict({
+//             'class': 'i-amphtml-story-sound-display',
+//           }),
+//           children: [
+//             {
+//               tag: 'div',
+//               attrs: dict({
+//                 'class': 'i-amphtml-message-container',
+//               }),
+//               children: [
+//                 {
+//                   tag: 'div',
+//                   attrs: dict({
+//                     'class': 'i-amphtml-story-mute-text' ,
+//                   }),
+//                   localizedStringId:
+//                         LocalizedStringId.AMP_STORY_AUDIO_MUTE_BUTTON_TEXT,
+//                 },
+//                 {
+//                   tag: 'div',
+//                   attrs: dict({
+//                     'class': 'i-amphtml-story-unmute-sound-text',
+//                   }),
+//                   localizedStringId:
+//                         LocalizedStringId.AMP_STORY_AUDIO_UNMUTE_SOUND_TEXT,
+//                 },
+//                 {
+//                   tag: 'div',
+//                   attrs: dict({
+//                     'class': 'i-amphtml-story-unmute-no-sound-text' ,
+//                   }),
+//                   localizedStringId:
+//                         LocalizedStringId.AMP_STORY_AUDIO_UNMUTE_NO_SOUND_TEXT,
+//                 },
+//               ],
+//             },
+//             {
+//               tag: 'div',
+//               attrs: dict({
+//                 'role': 'button',
+//                 'class': UNMUTE_CLASS + ' i-amphtml-story-button',
+//               }),
+//             },
+//             {
+//               tag: 'div',
+//               attrs: dict({
+//                 'role': 'button',
+//                 'class': MUTE_CLASS + ' i-amphtml-story-button',
+//               }),
+//             },
+//           ],
+//         },
+//         {
+//           tag: 'div',
+//           attrs: dict({
+//             'role': 'button',
+//             'class': INFO_CLASS + ' i-amphtml-story-button',
+//           }),
+//         },
+//         {
+//           tag: 'div',
+//           attrs: dict({
+//             'role': 'button',
+//             'class': SHARE_CLASS + ' i-amphtml-story-button',
+//           }),
+//         },
+//         {
+//           tag: 'div',
+//           attrs: dict({
+//             'role': 'button',
+//             'class': SIDEBAR_CLASS + ' i-amphtml-story-button',
+//           }),
+//         },
+//       ],
+//     },
+//   ],
+// };
 
 
 /**

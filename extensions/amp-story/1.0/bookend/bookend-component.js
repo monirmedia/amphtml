@@ -115,8 +115,6 @@ function prependTitle(components, localizationService) {
     return components;
   }
 
-  const title = 'Contact';
-  components.unshift({'type': 'heading', 'text': title});
   return components;
 }
 

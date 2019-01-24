@@ -239,8 +239,8 @@ export class AmpStoryBookend extends AMP.BaseElement {
 
     const innerContainer = this.getInnerContainer_();
     innerContainer.appendChild(this.replayButton_);
-    innerContainer.appendChild(
-        this.shareWidget_.build(getAmpdoc(this.win.document)));
+    // innerContainer.appendChild(
+    //     this.shareWidget_.build(getAmpdoc(this.win.document)));
 
     const consentId = this.storeService_.get(StateProperty.CONSENT_ID);
 
