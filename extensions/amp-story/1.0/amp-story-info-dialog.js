@@ -232,7 +232,7 @@ export class InfoDialog {
    * Sets the heading on the dialog.
    */
   setHeading_() {
-    const label = "Mmh 💯 Stories are personalized.";
+    const label = "mmh💯 stories are personalized.";
     const headingEl = dev().assertElement(
         this.element_.querySelector('.i-amphtml-story-info-heading'));
 

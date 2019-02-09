@@ -65,9 +65,9 @@ export class ArticleComponent {
     const url = articleJson['url'];
     const domainName = getSourceOriginForElement(element, url);
     title = articleJson['title'];
-    if (url.startsWith('https://monir.media/')) {
-      title = "Mmh 💯 "+ title;
-    }
+    // if (url.startsWith('https://monir.media/')) {
+    //   title = "mmh💯 "+ title;
+    // }
     const article = {
       url,
       domainName,

@@ -38,7 +38,6 @@ export function upgradeBackgroundAudio(element) {
           element.getAttribute('background-audio'), element);
   audioEl.setAttribute('src', audioSrc);
   audioEl.setAttribute('preload', 'auto');
-  audioEl.setAttribute('loop', '');
   audioEl.setAttribute('autoplay', '');
   audioEl.setAttribute('muted', '');
   audioEl.muted = true;
